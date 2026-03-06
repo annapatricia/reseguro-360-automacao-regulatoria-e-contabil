@@ -62,43 +62,30 @@ reseguro-360-automacao-regulatoria-e-contabil
 ├── requirements.txt
 └── README.md
 
-Regras de validação aplicadas
+## Regras de validação aplicadas
 
 O script de validação verifica, entre outros pontos:
-
 existência da resseguradora
-
 prêmio cedido maior que zero
-
 limite de sinistro maior que zero
-
 coerência entre data inicial e data final
-
 status ativo do contrato
-
 A partir dessas verificações, o sistema gera:
 
 compliance_status
-
 issues_found
-
 risk_score
-
 risk_level
 
-Tecnologias utilizadas
+##Tecnologias utilizadas
 
 Python
-
 Pandas
-
 Streamlit
-
 PowerShell
-
 Git e GitHub
 
-Como executar o projeto
+##Como executar o projeto
 1. Clonar o repositório
 git clone https://github.com/annapatricia/reseguro-360-automacao-regulatoria-e-contabil.git
 cd reseguro-360-automacao-regulatoria-e-contabil
@@ -120,51 +107,35 @@ Exemplo de saída
 O relatório final contém colunas como:
 
 contract_id
-
 ceding_company
-
 reinsurer
-
 premium_ceded
-
 claim_limit
-
 compliance_status
-
 issues_found
-
 risk_score
-
 risk_level
 
-Aplicação para negócio
+##Aplicação para negócio
 
 Este projeto demonstra como transformar regras operacionais e regulatórias em um fluxo automatizado de validação e monitoramento, com potencial de aplicação em:
 
 seguradoras
-
 resseguradoras
-
 áreas de compliance
-
 controles internos
-
 operações financeiras e contábeis
 
-Próximos passos
+##Próximos passos
 
 Evoluções possíveis para o projeto:
-
 inclusão de sinistros e recoveries
-
 conciliação financeira automática
-
 simulação de lançamentos contábeis
 
-arquitetura em AWS com S3, Glue e Athena
+##arquitetura em AWS com S3, Glue e Athena
 
 camada de auditoria e log de execução
-
 detecção de anomalias com machine learning
 
 
