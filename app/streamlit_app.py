@@ -9,13 +9,15 @@ REPORT_FILE = BASE_DIR / "reports" / "compliance_report.csv"
 st.set_page_config(page_title="Reseguro 360", layout="wide")
 
 st.title("Reseguro 360: Automação Regulatória e Contábil")
-
 st.write("Dashboard de validação regulatória para contratos de resseguro")
+
+if not REPORT_FILE.exists():
+    subprocess.run(["python", "src/regulatory_rules.py"], cwd=BASE_DIR)
 
 st.subheader("Executar validação regulatória")
 
 if st.button("Rodar validação"):
-    subprocess.run(["python", "src/regulatory_rules.py"])
+    subprocess.run(["python", "src/regulatory_rules.py"], cwd=BASE_DIR)
     st.success("Validação executada com sucesso")
 
 st.subheader("Relatório de Conformidade")
@@ -64,23 +66,15 @@ if REPORT_FILE.exists():
         df_filtrado = df_filtrado[df_filtrado["compliance_status"] == conformidade_selecionada]
 
     st.subheader("Tabela de contratos")
-
     st.dataframe(df_filtrado, use_container_width=True)
 
     st.subheader("Distribuição de Conformidade")
-
-    chart_data = df["compliance_status"].value_counts()
-
-    st.bar_chart(chart_data)
+    st.bar_chart(df["compliance_status"].value_counts())
 
     st.subheader("Distribuição de Nível de Risco")
-
-    risk_chart = df["risk_level"].value_counts()
-
-    st.bar_chart(risk_chart)
+    st.bar_chart(df["risk_level"].value_counts())
 
     st.subheader("Contratos com maior risco")
-
     top_risk = df.sort_values("risk_score", ascending=False)
 
     st.dataframe(
@@ -109,5 +103,4 @@ if REPORT_FILE.exists():
     )
 
 else:
-
-    st.warning("Relatório ainda não foi gerado")
+    st.warning("Não foi possível gerar o relatório automaticamente.")
