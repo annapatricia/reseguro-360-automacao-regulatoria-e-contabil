@@ -1,0 +1,8 @@
+contract_id,ceding_company,reinsurer,country,premium_ceded,claim_limit,start_date,end_date,status
+1,Seguradora Alfa,Resseguradora Global,Brasil,150000,500000,2025-01-01,2025-12-31,ATIVO
+2,Seguradora Beta,Resseguradora Atlas,Brasil,0,300000,2025-01-01,2025-12-31,ATIVO
+3,Seguradora Gama,,Brasil,200000,400000,2025-01-01,2025-12-31,ATIVO
+4,Seguradora Delta,Resseguradora Orion,Brasil,180000,0,2025-01-01,2025-12-31,ATIVO
+5,Seguradora Sigma,Resseguradora Global,Brasil,220000,600000,2025-01-01,2024-12-31,ATIVO
+6,Seguradora Zeta,Resseguradora Atlas,Brasil,175000,450000,2025-01-01,2025-12-31,INATIVO
+7,Seguradora Ômega,Resseguradora Prime,Brasil,210000,550000,2025-02-01,2025-12-31,ATIVO
