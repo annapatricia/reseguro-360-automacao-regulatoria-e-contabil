@@ -1,5 +1,11 @@
 # Reseguro 360: Automação Regulatória e Contábil
 
+## Dashboard online
+
+Acesse o dashboard interativo:
+
+https://reseguro-360-automacao-regulatoria-e-contabil.streamlit.app
+
 Projeto demonstrativo em Python com foco na automação de controles regulatórios, financeiros e contábeis aplicados à operação de resseguro.
 
 ## Objetivo
